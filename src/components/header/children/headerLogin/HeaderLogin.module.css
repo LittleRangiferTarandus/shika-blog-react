@@ -1,0 +1,37 @@
+.box{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  font-size: 15px;
+  height: 30px;
+}
+.avatar{
+  top: -3px;
+}
+.box *{
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: black;
+}
+.left{
+  border-radius: 50%;
+  position: relative;
+  left:20px;
+  display: block;
+  height: 30px;
+  width: 40px;
+  background-image: linear-gradient(rgb(184, 216, 230),skyblue,pink,rgb(228, 210, 216));
+}
+.else{
+  display: block;
+  height: 30px;
+  background-image: linear-gradient(rgb(184, 216, 230),skyblue,pink,rgb(228, 210, 216));
+  border-color: rgba(0, 9, 9, 0);
+}
+.test{
+
+}
