@@ -11,3 +11,10 @@ export function getBlogUser(currentPage,pageSize){
     url:"/blogUser/"+(currentPage+"/")+(pageSize+"")
   })
 }
+
+export function getBlogUserTag(currentPage,pageSize,field){
+  return request({
+    method:"get",
+    url:"/blogUserTag/"+field+"/"+(currentPage+"/")+(pageSize+"")
+  })
+}

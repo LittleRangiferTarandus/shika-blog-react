@@ -4,6 +4,7 @@ import Home from '../../views/home/Home'
 import CSS from "./BlogCentent.module.css"
 import Blogs from '../../views/blogs/Blogs';
 import Detail from '../../views/detail/Detail';
+import Skill from '../../views/skill/Skill';
 export default function BlogCentent() {
   return (
     <div className={CSS.content}>
@@ -12,6 +13,7 @@ export default function BlogCentent() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/detail" element={<Detail></Detail>}></Route>
+        <Route path="/skill" element={<Skill></Skill>}></Route>
       </Routes>
     </div>
   )

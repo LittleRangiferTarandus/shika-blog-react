@@ -1,0 +1,7 @@
+.box{
+  display: flex;
+  justify-content: stretch;
+}
+.left{
+  width: 100%;
+}
