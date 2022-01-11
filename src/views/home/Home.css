@@ -1,0 +1,40 @@
+.home-box{
+  display:flex ;
+  flex-flow:column wrap;
+  align-content:flex-start;
+  justify-self: center;
+  height:100% ;
+  transition: .5s;
+  width:100% ;
+  overflow: auto;
+  transform: rotateY(180deg);
+  background-color: white;
+  z-index: 100;
+}
+.home-outbox{
+  transform-style: preserve-3d;
+  transition: 1s;
+  height:80vh;
+  width:100% ;
+  z-index: 100;
+}
+.home-front{
+  height:100% ;
+  width:100% ;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  z-index: -100;
+}
+.home-img{
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 50%;
+  top: 50%;
+  margin-top: -175px;
+  margin-left: -175px;
+}
+.home-outbox:hover{
+  transform: rotateY(181deg) ;
+}

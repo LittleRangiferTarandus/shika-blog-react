@@ -57,7 +57,6 @@ export default function BlogTable() {
             tag:value.tags
           })
         })
-        console.log(tempList);
         setblogs(tempList)
         if(isFirst){
           setpagination({
@@ -86,6 +85,7 @@ export default function BlogTable() {
           expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
           rowExpandable: () => true,
         }}
+        rowClassName={(record,index)=>index%2===0?CSS.ou:CSS.ji}
         pagination={pagination}
         dataSource={blogs}
         onChange={onChange}

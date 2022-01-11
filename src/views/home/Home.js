@@ -3,7 +3,7 @@ import HomeCard from './children/card/HomeCard'
 import HistoryToday from './children/card/HistoryToday';
 import Weather from "./children/card/Weather"
 import { getBlogs } from '../../network/blog/blogs';
-import CSS from"./Home.module.css"
+import "./Home.css"
 
 export default function Home() {
   const [listText, setlistText] = React.useState([])
@@ -24,12 +24,18 @@ export default function Home() {
     })
   },[])
   return (
-    <div className={CSS.box}>
-      <HistoryToday></HistoryToday>
-      <Weather></Weather>
-      {listText.map((value,index)=>{
-        return <HomeCard key={index} title={value.title} list={[value.desc] }  link={{pathname:"/detail",state:{state:{id:value.id}}}}></HomeCard>
-      })}
+    <div className="home-outbox">
+      <div className="home-box">
+        <HistoryToday></HistoryToday>
+        <Weather></Weather>
+        {listText.map((value,index)=>{
+          return <HomeCard key={index} title={value.title} list={[value.desc] }  link={{pathname:"/detail",state:{state:{id:value.id}}}}></HomeCard>
+        })}
+      </div>
+      <div className="home-front">
+        <img className="home-img" alt='background' src={require("../../common/img/home/home.png")}></img>
+      </div>
+      
     </div>
   )
 }
