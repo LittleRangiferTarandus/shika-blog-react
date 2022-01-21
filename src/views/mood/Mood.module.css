@@ -1,0 +1,16 @@
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.outbox{
+  box-shadow: 0 0 5px rgb(73, 133, 156);
+}
+.title{
+  color: white;
+  font: 1.3em sans-serif;
+  font-weight: 900;
+  padding: 10px;
+  background-color: palevioletred;
+}

@@ -11,7 +11,7 @@ function HeaderMenu(props) {
         <Menu.Item key="1" onClick={()=>{navigate("/home")}}>首页<BankTwoTone /></Menu.Item>
         <Menu.Item key="2" onClick={()=>{navigate("/blogs")}}>博客<ContainerTwoTone /></Menu.Item>
         <Menu.Item key="3" onClick={()=>{navigate("/skill")}}>技术<ToolTwoTone /></Menu.Item>
-        <Menu.Item key="4">随心贴<SmileTwoTone /></Menu.Item>
+        <Menu.Item key="4" onClick={()=>{navigate("/mood")}}>随心贴<SmileTwoTone /></Menu.Item>
         <Menu.Item key="5">后台<EditTwoTone /></Menu.Item>
       </Menu>
     </div>

@@ -6,7 +6,7 @@ export default function HomeCard(props) {
   const {list,title,link}=props
   const navigate = useNavigate()
   return (
-    <div className={CSS.box}>
+    <div className='home-card-box'>
       <Card   className='home-card'>
         <h3 className='home-card-title' onClick={()=>link?navigate(link.pathname,link.state):""}>{title}</h3>
         {list.map((value,index)=>{

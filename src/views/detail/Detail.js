@@ -28,11 +28,12 @@ export default function Detail(props) {
           if(res.code===200){
             if(res.data&&res.data[0]){
               settags(res.data)
+            }else{
+              settags([{
+                content:'等待博主加入标签',
+                type:'field'
+              }])
             }
-            settags([{
-              content:'等待博主加入标签',
-              type:'field'
-            }])
           }
         })
       }

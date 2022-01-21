@@ -4,11 +4,15 @@
   cursor:pointer;
 }
 .home-card{ 
-  width: 200px ;
-  min-height: 150px ; 
-  border-radius :20px ;
-  margin:10px;
+  width: 100% ;
+  min-height: 120px ; 
+  overflow: auto;
+  max-height: 300px;
+  margin:1px;
+  
 }
-.box{
+.home-card-box{
   margin: 0;
+  width: 100%;
+
 }

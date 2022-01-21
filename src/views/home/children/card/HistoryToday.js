@@ -18,8 +18,7 @@ export default function HistoryToday() {
     })
   }, [])
   return (
-    <div>
+    
       <HomeCard list={listText} title="历史上的今天"></HomeCard>
-    </div>
   )
 }
