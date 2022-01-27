@@ -5,6 +5,12 @@ export function getBlogs(currentPage,pageSize){
     url:"/blogs/"+(currentPage+"/")+(pageSize+"")
   })
 }
+export function getBlogsHome(pageSize){
+  return request({
+    method:"get",
+    url:"/blogsHome/"+(pageSize+"")
+  })
+}
 export function getBlogUser(currentPage,pageSize){
   return request({
     method:"get",

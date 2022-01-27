@@ -3,6 +3,7 @@ import { Menu } from "antd"
 import CSS from "./HeaderMenu.module.css"
 import { useNavigate } from "react-router";
 import {BankTwoTone,ContainerTwoTone,ToolTwoTone,SmileTwoTone,EditTwoTone}from"@ant-design/icons"
+import store from '../../../../store/store';
 function HeaderMenu(props) {
   const navigate = useNavigate()
   return (
@@ -12,7 +13,7 @@ function HeaderMenu(props) {
         <Menu.Item key="2" onClick={()=>{navigate("/blogs")}}>博客<ContainerTwoTone /></Menu.Item>
         <Menu.Item key="3" onClick={()=>{navigate("/skill")}}>技术<ToolTwoTone /></Menu.Item>
         <Menu.Item key="4" onClick={()=>{navigate("/mood")}}>随心贴<SmileTwoTone /></Menu.Item>
-        <Menu.Item key="5">后台<EditTwoTone /></Menu.Item>
+        <Menu.Item key="5" style={{visibility:store.getState()?"visible":"hidden"}}>后台<EditTwoTone /></Menu.Item>
       </Menu>
     </div>
   )

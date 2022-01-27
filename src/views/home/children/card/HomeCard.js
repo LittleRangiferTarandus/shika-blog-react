@@ -7,11 +7,13 @@ export default function HomeCard(props) {
   const navigate = useNavigate()
   return (
     <div className='home-card-box'>
-      <Card   className='home-card'>
-        <h3 className='home-card-title' onClick={()=>link?navigate(link.pathname,link.state):""}>{title}</h3>
-        {list.map((value,index)=>{
-          return <p key={index}>{value}</p>
-        })}
+      <Card   >
+        <div className='home-card'>
+          <h3 className='home-card-title' onClick={()=>link?navigate(link.pathname,link.state):""}>{title}</h3>
+          {list.map((value,index)=>{
+            return <p className='home-card-p' key={index}>{value}</p>
+          })}
+        </div>
       </Card>
     </div>
   )

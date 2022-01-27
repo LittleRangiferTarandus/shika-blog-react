@@ -6,13 +6,16 @@
 .home-card{ 
   width: 100% ;
   min-height: 120px ; 
-  overflow: auto;
   max-height: 300px;
   margin:1px;
-  
+  overflow: auto;
 }
 .home-card-box{
   margin: 0;
   width: 100%;
-
+  max-width: 100%;
+}
+.home-card-p{
+  max-width: 100%;
+  word-wrap:break-word;
 }

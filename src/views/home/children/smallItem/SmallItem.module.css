@@ -1,0 +1,7 @@
+.smallItem{
+  background-color: white;
+  box-shadow: 0 0 5px whitesmoke;
+  padding: 0;
+  display: inline-block !important;
+  margin: 2px;
+}

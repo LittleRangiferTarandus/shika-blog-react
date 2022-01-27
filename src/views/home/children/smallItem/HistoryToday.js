@@ -1,8 +1,8 @@
 import React from 'react'
 import { getEvent } from '../../../../network/home/event';
 import formatDate from '../../../../common/js/fomatDate'
-import HomeCard from './HomeCard';
-
+import SmallItem from './SmallItem';
+import CSS from "./HistoryToday.module.css"
 export default function HistoryToday() {
   const [listText, setListText] = React.useState([])
   React.useEffect(() => {
@@ -18,7 +18,17 @@ export default function HistoryToday() {
     })
   }, [])
   return (
-    
-      <HomeCard list={listText} title="历史上的今天"></HomeCard>
+    <SmallItem title="历史上的今天"> 
+      <div style={{height:300,width:300}}>
+        <p className={CSS.title} >历史上的今天</p>
+        {
+          listText.map((el,index)=>{
+            return(
+              <p key={index}>{el}</p>
+            )
+          })
+        }
+      </div>
+    </SmallItem>
   )
 }
