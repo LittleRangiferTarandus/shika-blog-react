@@ -1,0 +1,13 @@
+.key{
+}
+.value{
+}
+
+.row{
+  margin: 5px 0;
+  height: 30px;
+}
+.infoBox{
+  border: 2px dotted gainsboro;
+  padding: 10px;
+}

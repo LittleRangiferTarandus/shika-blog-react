@@ -52,7 +52,7 @@ export default function BlogTable() {
             key:index,
             title:{title:value.title,id:value.id},
             publishDate:value.created.split("T").join(" "),
-            author:value.username,
+            author:value.nickname,
             description:value.description,
             tag:value.tags
           })

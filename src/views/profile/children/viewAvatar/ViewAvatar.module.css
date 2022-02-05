@@ -1,0 +1,19 @@
+.titleLine{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(221, 60, 159);
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.title{
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.avatar{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0,-50%);
+}

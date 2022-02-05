@@ -1,0 +1,14 @@
+
+.box{
+  background-color: rgba(255, 255, 255, 0.287);
+  position: relative;
+  width: 100%;
+}
+
+.noEdit,.yesEdit{
+  position: absolute;
+  width: 100%;
+  height: 175px;
+  background-color: rgba(255, 255, 255, 0.397);
+  transition: 0.2s;
+}

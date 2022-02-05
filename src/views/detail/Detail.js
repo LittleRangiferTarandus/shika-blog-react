@@ -20,7 +20,7 @@ export default function Detail(props) {
         getUser(temp.userId).then(res=>{
           if(res.code===200){
             setuser(res.data)
-            temp.username = res.data.username
+            temp.username = res.data.nickname
             setblog(temp)
           }
         })
@@ -43,7 +43,7 @@ export default function Detail(props) {
     <div className={CSS.box}>
       <div className={CSS.left}>
         <Article blog={blog}></Article>
-        <UserInfo avatar={user.avatar} username={user.username}></UserInfo>
+        <UserInfo avatar={user.avatar} username={user.nickname}></UserInfo>
       </div>
       <div>
         <TagsPresent tags={tags}></TagsPresent>

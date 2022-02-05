@@ -5,3 +5,11 @@ export function getUser(id){
     url:"/user/"+(id+"")
   })
 }
+
+export function editUser(data){
+  return request({
+    method:"post",
+    url:"/user/save",
+    data:data
+  })
+}

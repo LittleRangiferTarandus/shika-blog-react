@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import HomeCard from './children/card/HomeCard'
 import HistoryToday from './children/smallItem/HistoryToday';
-import { getBlogs,getBlogsHome } from '../../network/blog/blogs';
+import { getBlogsHome } from '../../network/blog/blogs';
 import "./Home.css"
 import ItemPic from './children/smallItem/ItemPic';
 

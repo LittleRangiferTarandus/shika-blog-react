@@ -13,7 +13,7 @@ function HeaderMenu(props) {
         <Menu.Item key="2" onClick={()=>{navigate("/blogs")}}>博客<ContainerTwoTone /></Menu.Item>
         <Menu.Item key="3" onClick={()=>{navigate("/skill")}}>技术<ToolTwoTone /></Menu.Item>
         <Menu.Item key="4" onClick={()=>{navigate("/mood")}}>随心贴<SmileTwoTone /></Menu.Item>
-        <Menu.Item key="5" style={{visibility:store.getState()?"visible":"hidden"}}>后台<EditTwoTone /></Menu.Item>
+        <Menu.Item key="5" onClick={()=>{navigate("/profile")}} style={{visibility:store.getState()?"visible":"hidden"}}>我的<EditTwoTone /></Menu.Item>
       </Menu>
     </div>
   )
