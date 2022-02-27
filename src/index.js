@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './store/store'
 import{BrowserRouter} from 'react-router-dom'
+import 'md-editor-rt/lib/style.css';
 ReactDOM.render(
   <BrowserRouter>
     <App></App>

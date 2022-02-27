@@ -8,7 +8,7 @@ export default function HistoryToday() {
   React.useEffect(() => {
     const list = []
     getEvent(formatDate(new Date().toString().slice(0,16),"mmdd")).then(res=>{
-      if(res.code===200){
+      if(res?.code===200){
         let temp = JSON.parse(res.data)
         for (let i = 0; i<4;i++){
           list.push(temp[i].title)

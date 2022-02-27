@@ -1,26 +1,25 @@
 import {request} from '../request/request'
-export function getBlogs(currentPage,pageSize){
-  return request({
-    method:"get",
-    url:"/blogs/"+(currentPage+"/")+(pageSize+"")
-  })
-}
+
 export function getBlogsHome(pageSize){
   return request({
     method:"get",
     url:"/blogsHome/"+(pageSize+"")
   })
 }
-export function getBlogUser(currentPage,pageSize){
+
+
+
+
+export function getBlogByUserPage(currentPage,userId,field){
   return request({
     method:"get",
-    url:"/blogUser/"+(currentPage+"/")+(pageSize+"")
+    url:"/blogsPro/userPage/"+(userId+"/")+(currentPage+"/")+(field+"")
   })
 }
 
-export function getBlogUserTag(currentPage,pageSize,field){
+export function getBlogsInCommonPage(currentPage,pageSize,field){
   return request({
     method:"get",
-    url:"/blogUserTag/"+field+"/"+(currentPage+"/")+(pageSize+"")
+    url:"/blogsPro/commonPage/"+(currentPage+"/")+(pageSize+"/")+(field+"")
   })
 }

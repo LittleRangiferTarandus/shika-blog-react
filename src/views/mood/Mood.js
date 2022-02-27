@@ -1,5 +1,6 @@
+import { Spin } from 'antd'
 import React from 'react'
-import { getBlogUserTag } from '../../network/blog/blogs'
+import { getBlogsInCommonPage } from '../../network/blog/blogs'
 import MoodCard from './children/moodCard/MoodCard'
 import MoreCard from './children/moodCard/MoreCard'
 import CSS from'./Mood.module.css'
@@ -8,9 +9,9 @@ export default function Mood() {
   const [mood, setmood] = React.useState([])
   const [icon, seticon] = React.useState("➕")
   React.useEffect(() => {
-    seticon("🔄")
-    getBlogUserTag(1,pageSize,'mood').then(res=>{
-      if(res.code===200){
+    seticon(<Spin size="large" />)
+    getBlogsInCommonPage(1,pageSize,'mood').then(res=>{
+      if(res?.code===200){
         setmood(res.data.records)
         seticon("➕")
       }

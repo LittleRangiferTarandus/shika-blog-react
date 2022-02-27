@@ -1,0 +1,15 @@
+.box{
+  background-color: white;
+  padding: 10px;
+}
+.page{
+  position: relative;
+  margin: 20px auto;
+  left: 0;
+  right: 0;
+}
+.outer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

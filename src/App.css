@@ -16,7 +16,7 @@
   width: 90vw;
   position: absolute;
   left: 50vw;
-  transform: translate(-50%);
+  margin-left: -45vw;
 }
 .app-layout2 {
   background-color: rgba(255, 255, 255, 0);

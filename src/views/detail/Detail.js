@@ -14,7 +14,7 @@ export default function Detail(props) {
   const location = useLocation()
   React.useEffect(() => {
     getBlog(location.state.id).then(res=>{
-      if(res.code===200){
+      if(res?.code===200){
         const temp=res.data
         temp.created=temp.created.split("T").join(" ")
         getUser(temp.userId).then(res=>{

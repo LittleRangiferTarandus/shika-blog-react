@@ -4,11 +4,23 @@
   "private": true,
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
+    "@babel/core": "^7.2.2",
+    "@babel/highlight": "^7.16.10",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "^7.17.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.18.3",
     "axios": "^0.24.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-mobx": "^2.0.0",
+    "editor.md": "^1.5.0",
+    "md-editor-rt": "^1.5.1",
+    "md-editor-v3": "^1.10.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-markdown": "^7.1.2",
@@ -44,5 +56,13 @@
   },
   "main": "index.js",
   "author": "LittleRangiferTarandus <1422755729@qq.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.69.1"
+  }
 }

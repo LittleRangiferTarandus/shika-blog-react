@@ -5,3 +5,30 @@ export function getBlog(id){
     url:"/blog/"+(id+"")
   })
 }
+
+export function deleteBlog(id){
+  return request({
+    method:"post",
+    url:"/blog/delete/"+(id+"")
+  })
+}
+
+export function edit(title,description,content,id){
+  return request({
+    method:"post",
+    url:"/blog/edit",
+    data:{
+      title,
+      description,
+      content,
+      id
+    }
+  })
+}
+
+export function getOneBlog(id){
+  return request({
+    method:"get",
+    url:"/blogsPro/oneBlog/"+(id+"")
+  })
+}

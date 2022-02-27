@@ -1,6 +1,6 @@
 import React from 'react'
 import { Table, Tag } from 'antd';
-import { getBlogUserTag } from '../../../../network/blog/blogs';
+import { getBlogsInCommonPage } from '../../../../network/blog/blogs';
 import { useNavigate } from 'react-router-dom';
 import CSS from"./BlogTable.module.css"
 
@@ -42,8 +42,8 @@ export default function BlogTable() {
     total:10,
   })
   const getPage=(current,size,isFirst=false)=>{
-    getBlogUserTag(current,size,"skill").then(res=>{
-      if(res.code===200){
+    getBlogsInCommonPage(current,size,"skill").then(res=>{
+      if(res?.code===200){
         let temp = res.data
         let tempList = []
         temp.records.forEach((value,index)=>{
