@@ -2,7 +2,7 @@ import React from 'react';
 import { forwardRef } from 'react';
 import { useImperativeHandle } from 'react';
 import { createRef } from 'react';
-import Dialogue from '../../../../components/dialogue/Dialogue';
+import Dialogue from '../../../../common/component/dialogue/Dialogue';
 import{deleteBlog} from '../../../../network/blog/blog'
 function DeleteBlog(props,ref) {
   const refDialog = createRef()

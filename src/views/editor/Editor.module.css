@@ -7,4 +7,5 @@
   margin: 10px;
   border-radius: 10px;
   background-color: rgba(214, 145, 193, 0.137);
+  min-height:50px;
 }

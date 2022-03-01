@@ -18,7 +18,10 @@ function MyBlogs(props) {
   const navigate = useNavigate()
 
   const getData = (page,field)=>{
-    getBlogByUserPage(page,store.getState()?store.getState().id:undefined,field).then(res=>{
+    let id =store.getState()?store.getState().id:undefined
+    
+    if (id===undefined||id===null) return
+    getBlogByUserPage(page,id,field).then(res=>{
       if(res.code===200){
         setdata(res.data.records)
         settotal(res.data.total)

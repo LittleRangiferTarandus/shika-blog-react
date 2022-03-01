@@ -12,7 +12,9 @@ function PersonInfo(props) {
   const [isEdit,setisEdit] = useState(false)
   useEffect(()=>{
     if(isEdit) return
-    getUser(store.getState()?store.getState().id:undefined).then(res=>{
+    let id = store.getState()?store.getState().id:undefined
+    if(id===undefined||id===null) return
+    getUser(id).then(res=>{
       if(res.code===200){
         const data=res.data
         setinfoEdit(data)

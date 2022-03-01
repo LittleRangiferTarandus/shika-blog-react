@@ -13,15 +13,17 @@ export function deleteBlog(id){
   })
 }
 
-export function edit(title,description,content,id){
+export function edit(title,description,content,field,id,tags){
   return request({
     method:"post",
     url:"/blog/edit",
     data:{
       title,
+      field,
       description,
       content,
-      id
+      id,
+      tags
     }
   })
 }

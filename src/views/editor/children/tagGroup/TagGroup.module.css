@@ -1,0 +1,21 @@
+.inputs{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(214, 145, 193, 0.137);
+  transition: 1s;
+  overflow: hidden;
+}
+
+.tagAdd{
+  transition:.5s;
+  overflow: hidden;
+}
+
+.tagChildren{
+  transition: 0.5s;
+  overflow: hidden;
+}
+.tagDiv{
+  margin: 5px 0;
+}
