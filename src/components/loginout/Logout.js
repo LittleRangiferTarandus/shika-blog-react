@@ -18,7 +18,7 @@ function Logout(props,ref) {
         store.dispatch(login(null))
         setConfirmLoading(false)
         setVisible(false)
-        window.sessionStorage.setItem("token","undefined")
+        window.localStorage.setItem("token","undefined")
       }else{
         setConfirmLoading(false)
 
@@ -40,7 +40,7 @@ function Logout(props,ref) {
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
       >
-        <h6>要退出登录吗</h6>
+        <h2>要退出登录吗</h2>
       </Modal>
     </div>
   );

@@ -1,0 +1,33 @@
+.comments{
+  max-height: 600px;
+  margin: 15px;
+  border-left: 3px dotted gray;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.245);
+  overflow: auto;
+}
+.commentItem{
+  border-bottom: 1px rgba(0, 0, 0, 0.167) solid;
+}
+.commentTime{
+  font-size: 0.7em;
+  margin-left: 25px;
+}
+.commentHead{
+  display: flex;
+  align-items: center;
+}
+.commentHead>*{
+  margin-left: 10px;
+}
+.commentContent{
+  margin-left: 25px;
+}
+.pagination{
+  float: right;
+  transform: scale(75%,75%);
+}
+.input{
+  width: 90%;
+  margin-left: 20px;
+}

@@ -10,12 +10,12 @@ export function request(config){
 //请求拦截
   instance.interceptors.request.use(
     config => {
-      let token = window.sessionStorage.getItem('token')
+      let token = window.localStorage.getItem('token')
       //console.log(token);
       if(token!==null&&token!==undefined&&token!=="undefined"){
         if(token.length>0){
           //console.log(token);
-          config.headers.Authorization = window.sessionStorage.getItem('token')
+          config.headers.Authorization = window.localStorage.getItem('token')
         }
       }else{
 
@@ -30,7 +30,7 @@ export function request(config){
       let token = response.headers.authorization
       if(token!==null&&token!==undefined&&token!=="undefined"){
         if(token.length>0){
-          window.sessionStorage.setItem("token",response.headers.authorization)
+          window.localStorage.setItem("token",response.headers.authorization)
         }
       }
       return response.data
