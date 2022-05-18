@@ -18,7 +18,8 @@ function Logout(props,ref) {
         store.dispatch(login(null))
         setConfirmLoading(false)
         setVisible(false)
-        window.localStorage.setItem("token","undefined")
+        window.localStorage.removeItem("token")
+        window.localStorage.removeItem("userInfo")
       }else{
         setConfirmLoading(false)
 

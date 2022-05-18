@@ -29,6 +29,7 @@ function Loginout(props,ref) {
     }).then(res=>{
       if(res.code===200){
         store.dispatch(login(res.data))
+        window.localStorage.setItem("userInfo",JSON.stringify(res.data))
         setConfirmLoading(false)
         setVisible(false)
       }else{

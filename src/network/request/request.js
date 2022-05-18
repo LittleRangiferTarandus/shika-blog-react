@@ -1,4 +1,6 @@
 import axios from 'axios';
+import store from '../../store/store';
+import { login } from '../../store/action/loginoutAction';
 
 export function request(config){
   const instance = axios.create({
@@ -36,6 +38,11 @@ export function request(config){
       return response.data
     },
     error=>{
+      if(error?.response?.data?.status===500&&error?.response?.data?.message==='ExpiredCredentialsException'){
+        store.dispatch(login(null))
+        window.localStorage.removeItem("token")
+        window.localStorage.removeItem("userInfo")
+      }
       if(error.response!==undefined&&error.response!==null)
         return error.response.data
       else

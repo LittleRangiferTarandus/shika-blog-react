@@ -10,7 +10,7 @@ export  default function  reducer(preState=initValue,action) {
     let {type,data} = action
     switch (type) { 
         case LOGIN:
-          window.localStorage.setItem("userInfo",JSON.stringify(data))
+          
           return data
         default:
             return preState

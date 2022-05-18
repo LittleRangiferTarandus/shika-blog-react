@@ -23,3 +23,10 @@ export function getBlogsInCommonPage(currentPage,pageSize,field){
     url:"/blogsPro/commonPage/"+(currentPage+"/")+(pageSize+"/")+(field+"")
   })
 }
+
+export function getCountBlog(userId ){
+  return request({
+    method:"get",
+    url:`/blog/count/${userId}`
+  })
+}
