@@ -1,10 +1,10 @@
 import axios from 'axios';
 import store from '../../store/store';
 import { login } from '../../store/action/loginoutAction';
-
+export const baseURL = "http://localhost:8099/";
 export function request(config){
   const instance = axios.create({
-    baseURL : "http://localhost:8099/",
+    baseURL : baseURL,
     timeout : 5000,
     headers:{ 
     }
@@ -17,7 +17,7 @@ export function request(config){
       if(token!==null&&token!==undefined&&token!=="undefined"){
         if(token.length>0){
           //console.log(token);
-          config.headers.Authorization = window.localStorage.getItem('token')
+          config.headers.Authorization = token
         }
       }else{
 
@@ -30,6 +30,7 @@ export function request(config){
 //响应拦截
   instance.interceptors.response.use(response => {
       let token = response.headers.authorization
+      //console.log(token);
       if(token!==null&&token!==undefined&&token!=="undefined"){
         if(token.length>0){
           window.localStorage.setItem("token",response.headers.authorization)

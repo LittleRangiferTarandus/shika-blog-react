@@ -19,7 +19,7 @@ const Activate = () => {
             let tempDate=v.time.split("T")[0].slice(5)
             let tempYear =v.time.split("T")[0].slice(0,5)
             if(currentYear===tempYear){
-              dataMap.set(tempDate,dataMap.get(tempDate)||0+v.count)
+              dataMap.set((tempDate,dataMap.get(tempDate)||0)+v.count)
             }
           })
           const value = new Array(dates.allDay.length).fill(0)

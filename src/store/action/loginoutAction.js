@@ -1,8 +1,14 @@
-import {LOGIN} from '../constant/loginoutConstant'
+import {LOGIN,UPDATE_AVATAR} from '../constant/loginoutConstant'
 export const login = (data)=>{
-  window.sessionStorage.setItem("userInfo",data)
   return{
     type:LOGIN,
+    data
+  }
+}
+
+export const updateAvatar = (data)=>{
+  return{
+    type:UPDATE_AVATAR,
     data
   }
 }
