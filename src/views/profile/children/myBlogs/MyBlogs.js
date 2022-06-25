@@ -18,7 +18,7 @@ function MyBlogs(props) {
   const navigate = useNavigate()
 
   const getData = (page,field)=>{
-    let id =store.getState()?store.getState().id:undefined
+    let id =store.getState()&&store.getState().userInfo?store.getState().userInfo.id:undefined
     
     if (id===undefined||id===null) return
     getBlogByUserPage(page,id,field).then(res=>{

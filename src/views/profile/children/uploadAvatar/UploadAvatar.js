@@ -45,7 +45,7 @@ export default function  UploadAvatar() {
         setImageUrl(url);
       });
       store.dispatch(updateAvatar(info.file.response.data))
-      window.localStorage.setItem("userInfo",JSON.stringify(store.getState()))
+      window.localStorage.setItem("userInfo",JSON.stringify(store.getState().userInfo))
     }
     if (info.file.status === 'error'){
       setLoading(false);
@@ -74,7 +74,7 @@ export default function  UploadAvatar() {
       showUploadList={false}
       action={baseURL+"user/upload/avatar"}
       headers={{
-        Authorization:window.localStorage.getItem('token')
+        Authorization:store.getState().token
       }}
       beforeUpload={beforeUpload}
       onChange={handleChange}

@@ -8,8 +8,13 @@ import store from '../../../../store/store'
 export default function HeaderLogin() {
   const loginRef = useRef()
   const logoutRef = useRef()
+  
   const showLoginout=()=>{
-    if(store.getState())
+    // console.log(store.getState());
+    // console.log(window.localStorage.getItem("token"),"head");
+
+    
+    if(store.getState().token)
       logoutRef.current.setShow()
     else
       loginRef.current.setShow()
@@ -23,10 +28,10 @@ export default function HeaderLogin() {
         <Col className={CSS.left} span={3}></Col>
         <Col className={CSS.else} span={7}>
           <Avatar className={CSS.avatar} size={25} 
-            icon={store.getState()&&store.getState().avatar?<img src={store.getState().avatar } alt="头像"></img>:<UserOutlined />} />
+            icon={store.getState()&&store.getState().userInfo?<img src={store.getState().userInfo.avatar } alt="头像"></img>:<UserOutlined />} />
         </Col>
         <Col className={CSS.else} span={7}>
-          <h4 className={CSS.text} >{store.getState()?store.getState().username:"ヾ(•ω•`)o"}</h4>
+          <h4 className={CSS.text} >{store.getState()&&store.getState().userInfo?store.getState().userInfo.username:"ヾ(•ω•`)o"}</h4>
         </Col>
         <Col className={CSS.else} span={7}>
         <p className={CSS.text} onClick={()=>showLoginout()}>登录/登出</p>

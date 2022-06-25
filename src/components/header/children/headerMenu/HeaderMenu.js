@@ -25,8 +25,8 @@ function HeaderMenu(props) {
         <Menu.Item key="home" onClick={()=>{navigate("/home")}}>首页<BankTwoTone /></Menu.Item>
         <Menu.Item key="skill" onClick={()=>{navigate("/skill")}}>技术<ToolTwoTone /></Menu.Item>
         <Menu.Item key="mood" onClick={()=>{navigate("/mood")}}>随心贴<SmileTwoTone /></Menu.Item>
-        <Menu.Item key="profile" onClick={()=>{navigate("/profile")}} style={{visibility:store.getState()?"visible":"hidden"}}>我的<EditTwoTone /></Menu.Item>
-        <Menu.Item key="editor" onClick={()=>{navigate("/editor")}} style={{visibility:store.getState()?"visible":"hidden"}}>发帖/编辑<EditTwoTone /></Menu.Item>
+        <Menu.Item key="profile" onClick={()=>{navigate("/profile")}} style={{visibility:store.getState().token?"visible":"hidden"}}>我的<EditTwoTone /></Menu.Item>
+        <Menu.Item key="editor" onClick={()=>{navigate("/editor")}} style={{visibility:store.getState().token?"visible":"hidden"}}>发帖/编辑<EditTwoTone /></Menu.Item>
       </Menu>
     </div>
   )

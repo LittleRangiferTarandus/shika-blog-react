@@ -1,24 +1,41 @@
-import React from 'react'
-import{Routes,Route} from "react-router"
-import Home from '../../views/home/Home'
+import React, { lazy, Suspense } from 'react'
+import{Routes,Route,Navigate} from "react-router"
 import CSS from "./BlogCentent.module.css"
-import Detail from '../../views/detail/Detail';
-import Skill from '../../views/skill/Skill';
-import Mood from '../../views/mood/Mood';
-import Profile from '../../views/profile/Profile';
-import Editor from '../../views/editor/Editor';
+
+import store from "../../store/store"
+
+const Home = lazy(()=>import('../../views/home/Home'))
+const Detail = lazy(()=>import('../../views/detail/Detail'))
+const Skill = lazy(()=>import('../../views/skill/Skill'))
+const Mood = lazy(()=>import('../../views/mood/Mood'))
+const Profile = lazy(()=>import('../../views/profile/Profile'))
+const Editor = lazy(()=>import('../../views/editor/Editor'))
+
 export default function BlogCentent() {
+  
   return (
     <div className={CSS.content}>
-      <Routes>
-        <Route path="/home" element={<Home></Home>}></Route>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/detail" element={<Detail></Detail>}></Route>
-        <Route path="/skill" element={<Skill></Skill>}></Route>
-        <Route path="/mood" element={<Mood></Mood>}></Route>
-        <Route path="/profile" element={<Profile></Profile>}></Route>
-        <Route path="/editor" element={<Editor></Editor>}></Route>
-      </Routes>
+        <Suspense fallback ={<div>time out</div>}>
+          <Routes>
+            <Route path="/home" element={<Home/>}></Route>
+            <Route path="/" element={<Home/>}></Route>
+            <Route path="/detail" element={<Detail/>}></Route>
+            <Route path="/skill" element={<Skill/>}></Route>
+            <Route path="/mood" element={<Mood/>}></Route>
+            {
+              store.getState().token == true?
+              <Route path="/profile" element={<Profile/>}></Route>:""
+            }
+            {
+              store.getState().token == true?
+              <Route path="/editor" element={<Editor/>}></Route>:""
+            }
+            
+            
+            <Route path="*" element={<Navigate from="/*" to="/"></Navigate>}></Route>
+            
+          </Routes>
+        </Suspense >
     </div>
   )
 }

@@ -12,7 +12,7 @@ function ViewAvatar(props) {
   return (
     <div className={CSS.title}>
       <Avatar className={CSS.avatar} size={100} 
-          icon={store.getState()&&store.getState().avatar?<img src={store.getState().avatar } alt="头像"></img>:<UserOutlined />} 
+          icon={store.getState()&&store.getState().userInfo?<img src={store.getState().userInfo.avatar } alt="头像"></img>:<UserOutlined />} 
       />
       
       <div className={CSS.upload} style={{visibility:showUpload?'visible':"hidden"}}>
